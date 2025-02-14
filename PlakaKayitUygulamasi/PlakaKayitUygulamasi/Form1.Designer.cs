@@ -57,6 +57,8 @@
             labelPlakaArama = new Label();
             textBoxPlakaArama = new TextBox();
             richTextBoxAramaSonucu = new RichTextBox();
+            messageGridView = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)messageGridView).BeginInit();
             SuspendLayout();
             // 
             // labelAdSoyad
@@ -223,7 +225,7 @@
             // 
             // labelYapilanIsler
             // 
-            labelYapilanIsler.Location = new Point(25, 612);
+            labelYapilanIsler.Location = new Point(25, 175);
             labelYapilanIsler.Margin = new Padding(4, 0, 4, 0);
             labelYapilanIsler.Name = "labelYapilanIsler";
             labelYapilanIsler.Size = new Size(500, 25);
@@ -232,20 +234,20 @@
             // 
             // textBoxYapilanIsler
             // 
-            textBoxYapilanIsler.Location = new Point(25, 638);
+            textBoxYapilanIsler.Location = new Point(25, 204);
             textBoxYapilanIsler.Margin = new Padding(4);
             textBoxYapilanIsler.Multiline = true;
             textBoxYapilanIsler.Name = "textBoxYapilanIsler";
             textBoxYapilanIsler.PlaceholderText = "Yapılan İşler";
-            textBoxYapilanIsler.Size = new Size(1036, 374);
+            textBoxYapilanIsler.Size = new Size(500, 377);
             textBoxYapilanIsler.TabIndex = 19;
             // 
             // btnKaydet
             // 
-            btnKaydet.Location = new Point(25, 1062);
+            btnKaydet.Location = new Point(25, 628);
             btnKaydet.Margin = new Padding(4);
             btnKaydet.Name = "btnKaydet";
-            btnKaydet.Size = new Size(1038, 75);
+            btnKaydet.Size = new Size(1100, 75);
             btnKaydet.TabIndex = 20;
             btnKaydet.Text = "Kaydet";
             btnKaydet.Click += KaydetButonu_Click;
@@ -286,15 +288,25 @@
             richTextBoxAramaSonucu.Margin = new Padding(4);
             richTextBoxAramaSonucu.Name = "richTextBoxAramaSonucu";
             richTextBoxAramaSonucu.ReadOnly = true;
-            richTextBoxAramaSonucu.Size = new Size(566, 937);
+            richTextBoxAramaSonucu.Size = new Size(928, 503);
             richTextBoxAramaSonucu.TabIndex = 24;
             richTextBoxAramaSonucu.Text = "";
+            // 
+            // messageGridView
+            // 
+            messageGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            messageGridView.Location = new Point(25, 719);
+            messageGridView.Name = "messageGridView";
+            messageGridView.RowHeadersWidth = 62;
+            messageGridView.Size = new Size(2093, 536);
+            messageGridView.TabIndex = 25;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1747, 1280);
+            ClientSize = new Size(2158, 1280);
+            Controls.Add(messageGridView);
             Controls.Add(labelAdSoyad);
             Controls.Add(textBoxAdSoyad);
             Controls.Add(labelTelefon);
@@ -324,6 +336,7 @@
             Name = "Form1";
             Text = "REK";
             Load += Form1_Load;
+            ((System.ComponentModel.ISupportInitialize)messageGridView).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -341,5 +354,6 @@
         private Label labelTeslimTarihi;
         private Label labelYapilanIsler;
         private RichTextBox richTextBoxAramaSonucu;
+        private DataGridView messageGridView;
     }
 }
